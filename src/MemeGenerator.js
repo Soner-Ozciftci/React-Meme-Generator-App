@@ -21,13 +21,12 @@ export default function MemeGenerator() {
     setToptext(e);
   }
   function handleBottomChange(e) {
-    setToptext(e);
+    setBottomtext(e);
   }
-function randomPhoto(){
-  let randomNum = Math.floor(Math.random()*100)
-  setRandomImg(allMemeImg[randomNum]);
-}
-
+  function randomPhoto() {
+    let randomNum = Math.floor(Math.random() * 100);
+    setRandomImg(allMemeImg[randomNum]);
+  }
 
   return (
     <div className="meme-from">
@@ -48,7 +47,7 @@ function randomPhoto(){
           value={bottomText}
           onChange={(e) => handleBottomChange(e.target.value)}
         />
-        <button onClick={()=> randomPhoto()}>
+        <button onClick={() => randomPhoto()}>
           <div>
             <span>
               <p>
