@@ -17,6 +17,18 @@ export default function MemeGenerator() {
       });
   });
 
+  function handleTopChange(e) {
+    setToptext(e);
+  }
+  function handleBottomChange(e) {
+    setToptext(e);
+  }
+function randomPhoto(){
+  let randomNum = Math.floor(Math.random()*100)
+  setRandomImg(allMemeImg[randomNum]);
+}
+
+
   return (
     <div className="meme-from">
       <div className="inputlar">
@@ -26,32 +38,36 @@ export default function MemeGenerator() {
           name="topText"
           placeholder="enter top text"
           value={topText}
-          // onChange={e =>handleTopChange(e.target.value)}
+          onChange={(e) => handleTopChange(e.target.value)}
         />
-           <input
+        <input
           type="text"
           className="input"
-          name="topText"
-          placeholder="enter top text"
-          value={topText}
-          // onChange={e =>handleTopChange(e.target.value)}
+          name="bottomText"
+          placeholder="enter bottom text"
+          value={bottomText}
+          onChange={(e) => handleBottomChange(e.target.value)}
         />
-        <button>
+        <button onClick={()=> randomPhoto()}>
           <div>
             <span>
-              <p>Generate Meme <p> :) </p></p>
+              <p>
+                Generate Meme <p> :) </p>
+              </p>
             </span>
           </div>
           <div>
             <span>
-              <p>Thanks <p>:D</p></p>
+              <p>
+                Thanks <p>:D</p>
+              </p>
             </span>
           </div>
         </button>
         <div className="image">
-               <img src={randomImg.url}/>
-                <h2 className='top'>{topText}</h2>
-                <h2 className='bottom'>{bottomText}</h2>
+          <img src={randomImg.url} />
+          <h2 className="top">{topText}</h2>
+          <h2 className="bottom">{bottomText}</h2>
         </div>
       </div>
     </div>
