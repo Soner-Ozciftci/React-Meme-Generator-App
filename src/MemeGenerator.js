@@ -48,6 +48,11 @@ export default function MemeGenerator() {
             </span>
           </div>
         </button>
+        <div className="image">
+               <img src={randomImg.url}/>
+                <h2 className='top'>{topText}</h2>
+                <h2 className='bottom'>{bottomText}</h2>
+        </div>
       </div>
     </div>
   );
