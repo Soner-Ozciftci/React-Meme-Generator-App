@@ -25,7 +25,29 @@ export default function MemeGenerator() {
           className="input"
           name="topText"
           placeholder="enter top text"
+          value={topText}
+          // onChange={e =>handleTopChange(e.target.value)}
         />
+           <input
+          type="text"
+          className="input"
+          name="topText"
+          placeholder="enter top text"
+          value={topText}
+          // onChange={e =>handleTopChange(e.target.value)}
+        />
+        <button>
+          <div>
+            <span>
+              <p>Generate Meme <p> :) </p></p>
+            </span>
+          </div>
+          <div>
+            <span>
+              <p>Thanks <p>:D</p></p>
+            </span>
+          </div>
+        </button>
       </div>
     </div>
   );
